@@ -3,7 +3,7 @@ import { CadastroSeguroComponent } from './components/cadastro-seguro/cadastro-s
 import { ListarSegurosComponent } from './components/listar-seguros/listar-seguros.component';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'listar' },
+  { path: '', pathMatch: 'full', redirectTo: 'cadastro' },
   { path: 'cadastro', component: CadastroSeguroComponent },
   { path: 'listar', component: ListarSegurosComponent },
 ];
