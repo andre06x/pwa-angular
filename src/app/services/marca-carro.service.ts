@@ -12,6 +12,8 @@ interface CarResponse {
 export class MarcaCarroService {
   private API_CARROS =
     'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes';
+  private API_SEGUROS = 'http://localhost:9000/api';
+
   constructor(private http: HttpClient) {}
 
   private mapMarcas(marcas: MarcaCarro[]) {
@@ -22,7 +24,7 @@ export class MarcaCarroService {
   }
   public getMarcas(): Observable<MarcaCarro[]> {
     return this.http
-      .jsonp(this.API_CARROS, 'callback')
+      .get(this.API_SEGUROS + '/makes')
       .pipe(map((res: any) => this.mapMarcas(res.Makes)));
   }
 }
