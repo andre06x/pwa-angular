@@ -15,7 +15,9 @@ export class SeguroService {
     private onlineOfflineService: OnlineOfflineService
   ) {
     this.ouvirStatusConexao();
-    this.buscarSalvos();
+    if (this.onlineOfflineService.isOnline) {
+      this.buscarSalvos();
+    }
   }
 
   salvar(seguro: Seguro) {
