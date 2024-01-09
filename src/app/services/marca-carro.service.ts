@@ -12,7 +12,7 @@ interface CarResponse {
 export class MarcaCarroService {
   private API_CARROS =
     'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes';
-  private API_SEGUROS = 'http://localhost:9000/api';
+  private API_SEGUROS = 'https://api-seguro.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 
