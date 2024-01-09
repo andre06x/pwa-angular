@@ -32,7 +32,7 @@
       "name": "car-api",
       "urls": [
         "https://www.carqueryapi.com/api/0.3/*",
-        "http://localhost:9000/*"
+        "https://api-seguro.onrender.com/*"
       ],
       "cacheConfig": {
         "strategy": "freshness",
