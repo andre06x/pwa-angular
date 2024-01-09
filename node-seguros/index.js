@@ -13,8 +13,8 @@ app.route("/api/seguros").get(listarSeguros);
 app.route("/api/makes").get((req, res) => res.json(makes));
 
 const HOST = "localhost";
-const PORT = 9000;
+const PORT = process.env.PORT ? process.env.PORT : 9000;
 
-const httpServer = app.listen(PORT, HOST, () => {
-  console.log(`Servidor rodando em http://${HOST}:${PORT}`);
+const httpServer = app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
