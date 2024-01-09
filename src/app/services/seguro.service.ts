@@ -8,7 +8,7 @@ import { OnlineOfflineService } from './online-offline.service';
   providedIn: 'root',
 })
 export class SeguroService {
-  private API_SEGUROS = 'http://localhost:9000/api';
+  private API_SEGUROS = 'https://api-seguro.onrender.com/api';
 
   constructor(
     private http: HttpClient,
